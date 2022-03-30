@@ -42,7 +42,6 @@ const TitledInput = (props: Props) => {
             onChange={setChangeValue}
             placeholder={placeholder}
             type={type || "text"}
-            autoComplete="on"
             maxLength={40}
             required
           />

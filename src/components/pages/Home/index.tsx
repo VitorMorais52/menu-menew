@@ -13,16 +13,7 @@ import { ProductProps } from "../../../services/redux/features/Products";
 
 //styles
 import logoutImg from "../../../assets/logout.svg";
-import {
-  Container,
-  Content,
-  Header,
-  Main,
-  UserInfo,
-  UserName,
-  IconButton,
-  GridProducts,
-} from "./styles";
+import { Container, UserName, IconButton, GridProducts } from "./styles";
 
 Modal.setAppElement("#root");
 
@@ -54,18 +45,18 @@ const Home = () => {
 
   return (
     <Container>
-      <Content>
-        <Header>
-          <UserInfo>
+      <div>
+        <header>
+          <div className="userInfo">
             <span>
               Bem vindo, <UserName>{user.name}!</UserName>
             </span>
             <IconButton onClick={handleLogout}>
               <img src={logoutImg} alt="logout icon" />
             </IconButton>
-          </UserInfo>
-        </Header>
-        <Main>
+          </div>
+        </header>
+        <main>
           <GridProducts>
             {products.map((product, index) => (
               <div
@@ -79,13 +70,13 @@ const Home = () => {
               </div>
             ))}
           </GridProducts>
-        </Main>
+        </main>
         <ProductModal
           isOpen={isProductModalOpen}
           onRequestClose={handleCloseProductModal}
           product={product}
         />
-      </Content>
+      </div>
     </Container>
   );
 };

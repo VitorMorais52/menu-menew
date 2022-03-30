@@ -62,7 +62,7 @@ const Login = () => {
                 title="Senha"
                 placeholder="••••••••••••"
                 type="password"
-                titleButton="Entrar"
+                titleButton="Sign in"
                 typeButton={"submit"}
               />
             </Wrapper>

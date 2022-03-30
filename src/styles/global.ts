@@ -10,6 +10,8 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         -webkit-font-smoothing: antialiased;
+        background-color: rgba(149, 69, 255, 0.9);
+        background-image: linear-gradient(to right, purple , rgb(108, 0, 255));
     }
 
     body, input, button, textarea {
@@ -43,6 +45,7 @@ export const GlobalStyle = createGlobalStyle`
         position: relative;
         border-radius: 0.24rem;
         background-color: rgba(149, 69, 255, 0.9);
+        background-image: linear-gradient(to right, purple , rgb(108, 0, 255));
 
     }
 

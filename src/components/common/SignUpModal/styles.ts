@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  max-width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  form {
+    width: 100%;
+  }
 
   .submit-user {
     margin-top: 1rem;
@@ -24,8 +30,7 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  width: 400px;
-  max-width: 400px;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;

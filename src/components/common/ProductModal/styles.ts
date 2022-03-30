@@ -39,17 +39,11 @@ export const Container = styled.div`
       color: white;
 
       order: reverse;
-      cursor: pointer;
 
       img {
         margin-top: 1rem;
         width: 300px;
         height: 200px;
-      }
-
-      transition: filter 0.2s;
-      &:hover {
-        filter: brightness(0.4);
       }
     }
 

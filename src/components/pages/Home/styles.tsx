@@ -1,37 +1,48 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100vw;
   height: 100%;
   display: flex;
   padding-bottom: 2.5rem;
   justify-content: center;
 
-  background-color: rgba(149, 69, 255, 0.9);
-`;
+  header {
+    display: flex;
+    margin: 2.5rem 0;
+    justify-content: right;
 
-export const Content = styled.div`
-  width: 1365px;
-  margin: 0 1rem;
-`;
-
-export const Header = styled.div`
-  display: flex;
-  margin: 2.5rem 0;
-  justify-content: right;
-
-  span {
-    font-size: 12px;
+    span {
+      font-size: 12px;
+    }
+    img {
+      width: 22px;
+      height: 22px;
+    }
   }
-  img {
-    width: 22px;
-    height: 22px;
+
+  .userInfo {
+    display: flex;
+    align-items: center;
+    color: rgb(239, 239, 239);
+
+    span {
+      font-size: 16px;
+      @media (max-width: 720px) {
+        display: none;
+      }
+    }
   }
 `;
 
 export const GridProducts = styled.div`
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
+
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+
   @media (min-width: 1365px) {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -41,7 +52,7 @@ export const GridProducts = styled.div`
   @media (max-width: 1035px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 590px) {
+  @media (max-width: 650px) {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -81,19 +92,6 @@ export const GridProducts = styled.div`
   }
 `;
 
-export const UserInfo = styled.div`
-  display: flex;
-  align-items: center;
-  color: rgb(239, 239, 239);
-
-  span {
-    font-size: 16px;
-    @media (max-width: 720px) {
-      display: none;
-    }
-  }
-`;
-
 export const UserName = styled.span`
   margin-right: 1rem;
   font-size: 12px;
@@ -118,8 +116,4 @@ export const IconButton = styled.div`
   &:hover {
     filter: brightness(0.8);
   }
-`;
-
-export const Main = styled.div`
-  width: 100%;
 `;

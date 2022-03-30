@@ -39,8 +39,10 @@ export const Input = styled.input`
   background: transparent;
   border: none;
   outline: none;
+  margin-right: 1rem;
   ::placeholder {
     color: white;
+    opacity: 0.7;
   }
 `;
 
