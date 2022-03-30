@@ -62,4 +62,14 @@ export const GlobalStyle = createGlobalStyle`
             filter: brightness(0.8);
         }
     }
+
+    .menu-drawer {
+     .MuiPaper-root {
+        background-color: rgba(0,0,0,0.7);
+        color: rgb(239,239,239);
+        svg {
+            stroke: rgb(239,239,239);
+        }
+     }
+ }
 `;

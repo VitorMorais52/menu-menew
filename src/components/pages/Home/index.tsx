@@ -1,8 +1,7 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import Modal from "react-modal";
 
 //services
-import { UserContext } from "../../../services/contexts";
 import { useAppSelector } from "../../../services/hooks/useStore";
 
 //common components
@@ -12,23 +11,18 @@ import ProductModal from "../../common/ProductModal";
 import { ProductProps } from "../../../services/redux/features/Products";
 
 //styles
-import logoutImg from "../../../assets/logout.svg";
-import { Container, UserName, IconButton, GridProducts } from "./styles";
+import { Container, GridProducts } from "./styles";
+import Header from "../../common/Header";
 
 Modal.setAppElement("#root");
 
 const Home = () => {
-  const { user, logout } = useContext(UserContext);
   const products: ProductProps[] = useAppSelector(
     (state) => state.products.value
   );
 
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   const [product, setProduct] = useState<ProductProps>();
-
-  const handleLogout = () => {
-    logout();
-  };
 
   const handleEditProduct = (selectedProduct: ProductProps) => {
     setProduct(selectedProduct);
@@ -46,18 +40,7 @@ const Home = () => {
   return (
     <Container>
       <div className="content">
-        <header>
-          <div className="content-header">
-            <div className="userInfo">
-              <span>
-                Bem vindo, <UserName>{user.name}!</UserName>
-              </span>
-              <IconButton onClick={handleLogout}>
-                <img src={logoutImg} alt="logout icon" />
-              </IconButton>
-            </div>
-          </div>
-        </header>
+        <Header />
         <main>
           <GridProducts>
             {products.map((product, index) => (

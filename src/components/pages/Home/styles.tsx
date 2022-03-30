@@ -11,37 +11,6 @@ export const Container = styled.div`
     justify-content: center;
   }
 
-  header {
-    top: 0;
-    position: fixed;
-
-    width: 100%;
-    margin-bottom: 2.5rem;
-
-    display: flex;
-    justify-content: center;
-
-    background-color: rgba(0, 0, 0, 0.7);
-
-    .content-header {
-      width: 1216px;
-
-      display: flex;
-      justify-content: right;
-
-      border-radius: 4px;
-      padding: 1rem 0;
-
-      span {
-        font-size: 12px;
-      }
-      img {
-        width: 22px;
-        height: 22px;
-      }
-    }
-  }
-
   main {
     max-width: 1296px;
     margin-top: 8rem;
@@ -117,31 +86,5 @@ export const GridProducts = styled.div`
 
       text-align: justify;
     }
-  }
-`;
-
-export const UserName = styled.span`
-  margin-right: 1rem;
-  font-size: 12px;
-  font-weight: bold;
-`;
-
-export const IconButton = styled.div`
-  width: 40px;
-  height: 40px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border: 2px solid rgb(239, 239, 239);
-  border-radius: 30px;
-  padding: 5px;
-  cursor: pointer;
-
-  transition: filter 0.2s;
-
-  &:hover {
-    filter: brightness(0.8);
   }
 `;
