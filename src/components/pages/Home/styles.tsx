@@ -24,13 +24,13 @@ export const Container = styled.div`
     background-color: rgba(0, 0, 0, 0.7);
 
     .content-header {
-      width: 1296px;
+      width: 1216px;
 
       display: flex;
       justify-content: right;
 
       border-radius: 4px;
-      padding: 1rem;
+      padding: 1rem 0;
 
       span {
         font-size: 12px;
