@@ -2,14 +2,14 @@ import { useContext, useState } from "react";
 import Modal from "react-modal";
 
 //services
-import { UserContext } from "../../../context";
-import { useAppSelector } from "../../hooks/useStore";
+import { UserContext } from "../../../services/contexts";
+import { useAppSelector } from "../../../services/hooks/useStore";
 
-//components
+//common components
 import ProductModal from "../../common/ProductModal";
 
 //types
-import { ProductProps } from "../../../redux/features/Products";
+import { ProductProps } from "../../../services/redux/features/Products";
 
 //styles
 import logoutImg from "../../../assets/logout.svg";

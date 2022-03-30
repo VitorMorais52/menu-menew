@@ -1,12 +1,15 @@
 import { useState, useContext } from "react";
 import Modal from "react-modal";
 
+//services
+import { UserContext, UserProps } from "../../../services/contexts";
+
+//common components
 import TitledInput from "../TitledInput";
 
 //styles
 import closeImg from "../../../assets/close.svg";
 import { Container, Wrapper } from "./styles";
-import { UserContext, UserProps } from "../../../context";
 
 type SignUpModal = {
   isOpen: boolean;

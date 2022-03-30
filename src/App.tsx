@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Provider } from "react-redux";
 import {
   BrowserRouter as Router,
   Routes,
@@ -6,14 +7,16 @@ import {
   Navigate,
   Outlet,
 } from "react-router-dom";
-import { Provider } from "react-redux";
-import { store } from "./redux/store";
 
-import { UserContext } from "./context";
+//services
+import { store } from "./services/redux/store";
+import { UserContext } from "./services/contexts";
 
+//pages
 import Login from "./components/pages/Login";
 import Home from "./components/pages/Home";
 
+//styles
 import { GlobalStyle } from "./styles/global";
 
 function App() {

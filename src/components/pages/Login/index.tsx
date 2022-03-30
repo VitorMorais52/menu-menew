@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { useNavigate } from "react-router-dom";
 
 //services
-import { UserContext, UserLogin } from "../../../context";
+import { UserContext, UserLogin } from "../../../services/contexts";
 
 //common components
 import TitledInput from "../../common/TitledInput";

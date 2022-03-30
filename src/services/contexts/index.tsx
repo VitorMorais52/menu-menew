@@ -38,16 +38,16 @@ export const UserProvider: React.FC = ({ children }) => {
     setUser(objUser);
   }, []);
 
-  const getUsersList = () => {
+  const getUserList = () => {
     const storagedUsers = localStorage.getItem("@App:users");
-    const usersList = storagedUsers ? JSON.parse(storagedUsers) : [];
-    return usersList;
+    const userList = storagedUsers ? JSON.parse(storagedUsers) : [];
+    return userList;
   };
 
   const login = (newUser: UserLogin) => {
-    const usersList: UserProps[] = getUsersList();
+    const userList: UserProps[] = getUserList();
 
-    const user = usersList.find(
+    const user = userList.find(
       (user) =>
         user.email === newUser.email && user.password === newUser.password
     );
@@ -67,9 +67,9 @@ export const UserProvider: React.FC = ({ children }) => {
   };
 
   const storeUsers = (newUser: UserProps) => {
-    const usersList: UserProps[] = getUsersList();
+    const userList: UserProps[] = getUserList();
 
-    const user = usersList.find(
+    const user = userList.find(
       (user) =>
         user.email === newUser.email && user.password === newUser.password
     );
@@ -79,8 +79,8 @@ export const UserProvider: React.FC = ({ children }) => {
       return;
     }
 
-    usersList.push(newUser);
-    localStorage.setItem("@App:users", JSON.stringify(usersList));
+    userList.push(newUser);
+    localStorage.setItem("@App:users", JSON.stringify(userList));
     alert("Usuário criado.");
   };
 

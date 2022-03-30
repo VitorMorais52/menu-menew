@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
 
-//components
-import TitledInput from "../TitledInput";
-
 //services
-import { useAppDispatch } from "../../hooks/useStore";
-import { updateProduct } from "../../../redux/features/Products";
-import { ProductProps } from "../../../redux/features/Products";
+import { useAppDispatch } from "../../../services/hooks/useStore";
+import { updateProduct } from "../../../services/redux/features/Products";
+import { ProductProps } from "../../../services/redux/features/Products";
 
 //styles
 import closeImg from "../../../assets/close.svg";

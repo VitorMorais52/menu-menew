@@ -77,7 +77,6 @@ export const GridProducts = styled.div`
       display: flex;
 
       text-align: justify;
-      overflow: auto;
     }
   }
 `;
