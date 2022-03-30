@@ -1,3 +1,6 @@
+//services
+import { UserContext } from "../../../services/contexts";
+
 //@mui components
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -6,10 +9,13 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import SettingsIcon from "@mui/icons-material/Settings";
+import LogoutIcon from "@mui/icons-material/Logout";
 import HomeIcon from "@mui/icons-material/Home";
 
 //stylesheets
 import { Container } from "./styles";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
 
 type MenuProps = {
   isOpen: boolean;
@@ -17,6 +23,14 @@ type MenuProps = {
 };
 
 function Menu({ isOpen, requestClose }: MenuProps) {
+  const navigate = useNavigate();
+  const { logout } = useContext(UserContext);
+
+  const handleLogout = () => {
+    navigate("/login");
+    logout();
+  };
+
   return (
     <Drawer
       open={isOpen}
@@ -26,7 +40,7 @@ function Menu({ isOpen, requestClose }: MenuProps) {
     >
       <Container>
         <List>
-          <ListItem button key={"Home"}>
+          <ListItem button key={"Home"} onClick={() => navigate("/")}>
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
@@ -35,11 +49,24 @@ function Menu({ isOpen, requestClose }: MenuProps) {
 
           <Divider />
 
-          <ListItem button key={"Settings"}>
+          <ListItem
+            button
+            key={"Settings"}
+            onClick={() => navigate("/settings")}
+          >
             <ListItemIcon>
               <SettingsIcon />
             </ListItemIcon>
             <ListItemText primary={"Settings"} />
+          </ListItem>
+
+          <Divider />
+
+          <ListItem button key={"Logout"} onClick={handleLogout}>
+            <ListItemIcon>
+              <LogoutIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Logout / Login"} />
           </ListItem>
         </List>
       </Container>

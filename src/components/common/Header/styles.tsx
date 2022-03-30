@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.header`
   top: 0;
   position: fixed;
+  z-index: 1;
 
   width: 100%;
   margin-bottom: 2.5rem;
@@ -15,11 +16,26 @@ export const Container = styled.header`
   .content-header {
     width: 1216px;
 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
     border-radius: 4px;
     padding: 1rem 0;
+
+    .user-info {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: white;
+    }
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 700;
+    }
 
     svg {
       stroke: rgb(239, 239, 239);
@@ -43,7 +59,7 @@ export const Container = styled.header`
       align-items: center;
 
       background: transparent;
-      border: 2px solid rgb(239, 239, 239);
+      border: none;
       border-radius: 30px;
       padding: 5px;
       cursor: pointer;

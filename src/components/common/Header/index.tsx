@@ -36,7 +36,10 @@ function Header() {
         <IconButton onClick={handleOpenMenu}>
           <MenuIcon fontSize="large" />
         </IconButton>
-        <div className="userInfo">
+        <div>
+          <h1>Fruit Menu</h1>
+        </div>
+        <div className="user-info">
           <span>
             Bem vindo, <UserName>{user.name}!</UserName>
           </span>

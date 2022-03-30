@@ -42,6 +42,7 @@ const TitledInput = (props: Props) => {
             onChange={setChangeValue}
             placeholder={placeholder}
             type={type || "text"}
+            minLength={3}
             maxLength={40}
             required
           />
