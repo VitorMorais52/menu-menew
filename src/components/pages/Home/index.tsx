@@ -45,15 +45,17 @@ const Home = () => {
 
   return (
     <Container>
-      <div>
+      <div className="content">
         <header>
-          <div className="userInfo">
-            <span>
-              Bem vindo, <UserName>{user.name}!</UserName>
-            </span>
-            <IconButton onClick={handleLogout}>
-              <img src={logoutImg} alt="logout icon" />
-            </IconButton>
+          <div className="content-header">
+            <div className="userInfo">
+              <span>
+                Bem vindo, <UserName>{user.name}!</UserName>
+              </span>
+              <IconButton onClick={handleLogout}>
+                <img src={logoutImg} alt="logout icon" />
+              </IconButton>
+            </div>
           </div>
         </header>
         <main>

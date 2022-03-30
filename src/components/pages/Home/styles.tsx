@@ -2,22 +2,49 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 100%;
-  display: flex;
   padding-bottom: 2.5rem;
-  justify-content: center;
+
+  .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   header {
-    display: flex;
-    margin: 2.5rem 0;
-    justify-content: right;
+    top: 0;
+    position: fixed;
 
-    span {
-      font-size: 12px;
+    width: 100%;
+    margin-bottom: 2.5rem;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .content-header {
+      width: 1296px;
+
+      display: flex;
+      justify-content: right;
+
+      border-radius: 4px;
+      padding: 1rem;
+
+      span {
+        font-size: 12px;
+      }
+      img {
+        width: 22px;
+        height: 22px;
+      }
     }
-    img {
-      width: 22px;
-      height: 22px;
-    }
+  }
+
+  main {
+    max-width: 1296px;
+    margin-top: 8rem;
   }
 
   .userInfo {
@@ -58,8 +85,6 @@ export const GridProducts = styled.div`
 
   .product {
     padding-top: 0.5rem;
-    padding-bottom: 1rem;
-    max-width: 300px;
 
     display: flex;
     flex-direction: column;
@@ -67,15 +92,18 @@ export const GridProducts = styled.div`
     align-items: center;
 
     background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 4px;
     color: white;
 
     order: reverse;
     cursor: pointer;
 
     img {
-      margin-top: 1rem;
-      width: 300px;
+      max-width: 280px;
       height: 200px;
+      padding: 1rem;
     }
 
     transition: filter 0.2s;
@@ -106,7 +134,7 @@ export const IconButton = styled.div`
   justify-content: center;
   align-items: center;
 
-  border: 1px solid rgb(239, 239, 239);
+  border: 2px solid rgb(239, 239, 239);
   border-radius: 30px;
   padding: 5px;
   cursor: pointer;
