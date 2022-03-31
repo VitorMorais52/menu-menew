@@ -33,6 +33,8 @@ export const GlobalStyle = createGlobalStyle`
         right: 0;
         left: 0;
 
+        z-index: 1;
+
         display: flex;
         align-items: center;
         justify-content: center;
