@@ -23,6 +23,16 @@ export const Content = styled.div`
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 4px;
 
+  h1 {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-weight: 700;
+  }
+
   @media (min-width: 460px) {
     margin-left: 5vw;
   }

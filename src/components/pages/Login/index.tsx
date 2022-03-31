@@ -45,6 +45,7 @@ const Login = () => {
     <Container>
       <Content>
         <main>
+          <h1>Login</h1>
           <form onSubmit={handleSubmitLogin}>
             <Wrapper>
               <TitledInput
