@@ -1,33 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  height: 100%;
+export const Container = styled.main`
+  display: flex;
+  justify-content: center;
+
+  margin-top: 8rem;
   padding-bottom: 2.5rem;
-
-  .content {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  main {
-    max-width: 1296px;
-    margin-top: 8rem;
-  }
-
-  .userInfo {
-    display: flex;
-    align-items: center;
-    color: rgb(239, 239, 239);
-
-    span {
-      font-size: 16px;
-      @media (max-width: 720px) {
-        display: none;
-      }
-    }
-  }
 `;
 
 export const GridProducts = styled.div`
@@ -54,6 +32,7 @@ export const GridProducts = styled.div`
 
   .product {
     padding-top: 0.5rem;
+    min-width: 280px;
 
     display: flex;
     flex-direction: column;

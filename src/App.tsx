@@ -15,6 +15,7 @@ import { UserContext } from "./services/contexts";
 //pages
 import Login from "./components/pages/Login";
 import Home from "./components/pages/Home";
+import Settings from "./components/pages/Settings";
 
 //styles
 import { GlobalStyle } from "./styles/global";
@@ -46,6 +47,7 @@ function App() {
           <Route element={<RequireAuth />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
+            <Route path="/settings" element={<Settings />} />
           </Route>
         </Routes>
       </Router>

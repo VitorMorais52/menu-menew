@@ -38,31 +38,29 @@ const Home = () => {
   };
 
   return (
-    <Container>
-      <div className="content">
-        <Header />
-        <main>
-          <GridProducts>
-            {products.map((product, index) => (
-              <div
-                className="product"
-                key={index}
-                onClick={() => handleEditProduct(product)}
-              >
-                <h4>{product.name}</h4>
-                <span>{product.description}</span>
-                <img src={product.img} alt={"fruit img" + product.name} />
-              </div>
-            ))}
-          </GridProducts>
-        </main>
+    <>
+      <Header />
+      <Container>
+        <GridProducts>
+          {products.map((product, index) => (
+            <div
+              className="product"
+              key={index}
+              onClick={() => handleEditProduct(product)}
+            >
+              <h4>{product.name}</h4>
+              <span>{product.description}</span>
+              <img src={product.img} alt={"fruit img" + product.name} />
+            </div>
+          ))}
+        </GridProducts>
         <ProductModal
           isOpen={isProductModalOpen}
           onRequestClose={handleCloseProductModal}
           product={product}
         />
-      </div>
-    </Container>
+      </Container>
+    </>
   );
 };
 
