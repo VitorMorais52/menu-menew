@@ -47,7 +47,14 @@ export const Container = styled.div`
       }
     }
 
+    label {
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+
     .input-textarea {
+      margin-top: 0.5rem;
       padding: 0.5rem;
       color: white;
 

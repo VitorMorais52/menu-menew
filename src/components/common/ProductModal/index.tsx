@@ -61,14 +61,17 @@ const ProductModal = ({
           </div>
           <form onSubmit={handleSubmit}>
             <Wrapper>
-              <textarea
-                className="input-textarea"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              />
+              <label>
+                Edit description
+                <textarea
+                  className="input-textarea"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                />
+              </label>
             </Wrapper>
             <button className="submit-update-product" type="submit">
-              Salvar alterações
+              Save changes
             </button>
           </form>
         </div>

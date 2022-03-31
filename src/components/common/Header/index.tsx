@@ -41,7 +41,7 @@ function Header() {
         </div>
         <div className="user-info">
           <span>
-            Bem vindo, <UserName>{user.name}!</UserName>
+            Welcome, <UserName>{user.name}!</UserName>
           </span>
           <button className="logout-button" onClick={handleLogout}>
             <img src={logoutImg} alt="logout icon" />

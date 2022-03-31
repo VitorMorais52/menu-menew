@@ -85,7 +85,7 @@ const SignUpModal = ({ isOpen, onRequestClose }: SignUpModal) => {
             />
           </Wrapper>
           <button className="submit-user" type="submit">
-            Criar usuário
+            Create user
           </button>
         </form>
       </Container>
