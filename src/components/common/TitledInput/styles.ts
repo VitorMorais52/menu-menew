@@ -47,7 +47,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 85px;
+  min-width: 85px;
   height: 36px;
   color: #b22e6f;
 
