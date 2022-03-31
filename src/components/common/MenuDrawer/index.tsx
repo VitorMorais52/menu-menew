@@ -1,21 +1,23 @@
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+
 //services
 import { UserContext } from "../../../services/contexts";
 
-//@mui components
+//@mui components and icons
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+
+import ListItemIcon from "@mui/material/ListItemIcon";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import HomeIcon from "@mui/icons-material/Home";
 
 //stylesheets
 import { Container } from "./styles";
-import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
 
 type MenuProps = {
   isOpen: boolean;
